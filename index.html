@@ -1,0 +1,59 @@
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Boggle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Music Boggle</h1>
+
+        <div id="setup-screen">
+            <h2>Game Setup</h2>
+            <label for="player-count">Select Players:</label>
+            <select id="player-count">
+                <option value="1">1 Player</option>
+                <option value="2">2 Players</option>
+            </select>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="score-board">
+                <!-- Scores will be populated here -->
+            </div>
+            <div id="current-player-display" style="display:none;">Current Player: <span id="current-player-number">1</span></div>
+
+            <div id="grid-container">
+                <!-- Grid will be generated here -->
+            </div>
+
+            <div id="current-word-section">
+                <h3>Current Word: <span id="current-word-display"></span></h3>
+                <button id="submit-word-btn">Submit Word</button>
+                <button id="clear-selection-btn">Clear Selection</button>
+            </div>
+
+            <div id="found-words-section">
+                <div id="player1-words" class="found-words-list">
+                    <h4>Player 1 Found Words:</h4>
+                    <ul id="p1-word-list"></ul>
+                </div>
+                <div id="player2-words" class="found-words-list" style="display:none;">
+                    <h4>Player 2 Found Words:</h4>
+                    <ul id="p2-word-list"></ul>
+                </div>
+            </div>
+            <div id="message-area"></div>
+            <button id="restart-game-btn">New Game (Restart)</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
+    
